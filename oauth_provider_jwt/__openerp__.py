@@ -16,6 +16,11 @@
             'jwt',
             'cryptography',
         ],
+        '_packages': {
+            'python': {
+                'jwt': 'python_jwt',
+            },
+        },
     },
     'depends': [
         'oauth_provider',
