@@ -5,7 +5,7 @@
 import collections
 import logging
 
-import odoo.loglevels
+import openerp.loglevels
 
 _logger = logging.getLogger(__name__)
 try:
@@ -27,7 +27,7 @@ SentryOption = collections.namedtuple(
 
 # Mapping of Odoo logging level -> Python stdlib logging library log level.
 LOG_LEVEL_MAP = dict([
-    (getattr(odoo.loglevels, 'LOG_%s' % x), getattr(logging, x))
+    (getattr(openerp.loglevels, 'LOG_%s' % x), getattr(logging, x))
     for x in ('CRITICAL', 'ERROR', 'WARNING', 'INFO', 'DEBUG', 'NOTSET')
 ])
 DEFAULT_LOG_LEVEL = 'warn'
