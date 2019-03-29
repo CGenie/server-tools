@@ -33,21 +33,21 @@ LOG_LEVEL_MAP = dict([
 DEFAULT_LOG_LEVEL = 'warn'
 
 ODOO_USER_EXCEPTIONS = [
-    'odoo.exceptions.AccessDenied',
-    'odoo.exceptions.AccessError',
-    'odoo.exceptions.DeferredException',
-    'odoo.exceptions.MissingError',
-    'odoo.exceptions.RedirectWarning',
-    'odoo.exceptions.UserError',
-    'odoo.exceptions.ValidationError',
-    'odoo.exceptions.Warning',
-    'odoo.exceptions.except_orm',
+    'openerp.exceptions.AccessDenied',
+    'openerp.exceptions.AccessError',
+    'openerp.exceptions.DeferredException',
+    'openerp.exceptions.MissingError',
+    'openerp.exceptions.RedirectWarning',
+    'openerp.exceptions.UserError',
+    'openerp.exceptions.ValidationError',
+    'openerp.exceptions.Warning',
+    'openerp.exceptions.except_orm',
 ]
 DEFAULT_IGNORED_EXCEPTIONS = ','.join(ODOO_USER_EXCEPTIONS)
 
 PROCESSORS = (
     'raven.processors.SanitizePasswordsProcessor',
-    'odoo.addons.sentry.logutils.SanitizeOdooCookiesProcessor',
+    'openerp.addons.sentry.logutils.SanitizeOdooCookiesProcessor',
 )
 DEFAULT_PROCESSORS = ','.join(PROCESSORS)
 
